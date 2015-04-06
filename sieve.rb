@@ -25,6 +25,3 @@ class Sieve
     @primes_found
   end
 end
-
-a = Sieve.new(4)
-a.primes
