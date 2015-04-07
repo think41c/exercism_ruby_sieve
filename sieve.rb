@@ -1,8 +1,8 @@
 class Sieve
-  attr_reader :num_of_primes
+  attr_reader :num_primes_to_find
 
-  def initialize(num_of_primes)
-    @num_of_primes = num_of_primes
+  def initialize(num_primes_to_find)
+    @num_primes_to_find = num_primes_to_find
   end
 
   def prime?(num)
@@ -14,7 +14,7 @@ class Sieve
     current_num  = 3
     @primes_found = [2]
     
-    until current_num == @num_of_primes
+    until current_num == @num_primes_to_find
       if prime?(current_num)
         @primes_found << current_num
         current_num += 1 
