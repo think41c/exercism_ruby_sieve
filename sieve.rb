@@ -6,8 +6,13 @@ class Sieve
   end
 
   def prime?(num)
-    upper_range = num/2
-    @primes_found.none? { |x| num % x == 0 }
+    @primes_found.none? do |x| 
+      if x > (num/2)
+        false
+      else
+        num % x == 0 
+      end
+    end
   end
 
   def primes
