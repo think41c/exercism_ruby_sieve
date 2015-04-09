@@ -6,8 +6,9 @@ class Sieve
   end
 
   def prime?(num)
+    sq_root = Math.sqrt(num).to_i
     @primes_found.none? do |x| 
-      if x > Math.sqrt(num).to_i
+      if x > sq_root
         false
       else
         num % x == 0 
