@@ -6,7 +6,7 @@ class Sieve
   end
 
   def prime?(num)
-    sq_root = Math.sqrt(num).to_i
+    sq_root = Math.sqrt(num)
     @primes_found.none? do |x| 
       if x > sq_root
         false
@@ -23,10 +23,8 @@ class Sieve
     until current_num == @num_primes_to_find
       if prime?(current_num)
         @primes_found << current_num
-        current_num += 1 
-      else
-        current_num += 1 
       end
+      current_num += 1
     end
     @primes_found
   end
