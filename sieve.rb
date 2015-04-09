@@ -6,8 +6,9 @@ class Sieve
   end
 
   def prime?(num)
+    half_num = num/2
     @primes_found.none? do |x| 
-      if x > (num/2)
+      if x > half_num
         false
       else
         num % x == 0 
