@@ -6,9 +6,8 @@ class Sieve
   end
 
   def prime?(num)
-    half_num = num/2
     @primes_found.none? do |x| 
-      if x > half_num
+      if x > Math.sqrt(num).to_i
         false
       else
         num % x == 0 
